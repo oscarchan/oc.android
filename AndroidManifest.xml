@@ -13,6 +13,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".widget.SimpleAdapterActivity" android:label="SimpleAdapter Test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
     </application>
     <uses-sdk android:minSdkVersion="4" />
 
