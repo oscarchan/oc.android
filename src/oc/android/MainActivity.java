@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 public class MainActivity extends ListActivity
 {
@@ -36,11 +37,34 @@ public class MainActivity extends ListActivity
         Intent intent = getIntent();
         String path = StringUtils.trimToEmpty(intent.getStringExtra(OC_ANDROID_PATH));
         
-        List<Map<String, Object>> data = getData(path);
+        List<Map<String, Object>> data = getData(path, null);
         
         setListAdapter(new SimpleAdapter(this, data, android.R.layout.simple_list_item_1, new String[] { TITLE }, new int[] {android.R.id.text1}));
     }
     
+		private List<Map<String, Object>> getData(String path, List<Map<String, Object>> current)
+		{
+			if(path==null) {
+				Toast.makeText(this, "missing path", Toast.LENGTH_SHORT);
+				return Collections.emptyList();
+			} else if(current==null) {
+				return getData(path, getData(path));
+			} else if (current.size()==1) {
+      	Map<String, Object> map = current.get(0);
+      	
+      	Intent intent = (Intent) map.get(INTENT);
+      	if(MainActivity.class.getName().equals(intent.getComponent().getClassName())) {
+      		String newPath = (String) intent.getStringExtra(OC_ANDROID_PATH);
+      		
+      		return getData(newPath, getData(path));
+      	} else {
+      		return current;
+      	}
+			} else {
+				return current;
+			}
+				
+		}
 		protected List<Map<String, Object>> getData(String prefix) 
     {
       List<Map<String, Object>> listViewData = new ArrayList<Map<String, Object>>();
@@ -125,7 +149,8 @@ public class MainActivity extends ListActivity
 		startActivity(intent);
 	}
 
-  private final static Comparator<Map> sDisplayNameComparator = new Comparator<Map>() {
+  @SuppressWarnings("unchecked")
+	private final static Comparator<Map> sDisplayNameComparator = new Comparator<Map>() {
     private final Collator  collator = Collator.getInstance();
 
     public int compare(Map map1, Map map2) {
