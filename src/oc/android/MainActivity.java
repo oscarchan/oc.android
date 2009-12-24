@@ -142,7 +142,8 @@ public class MainActivity extends ListActivity
     return addItem(name, intent);
   }
  
-	protected void onListItemClick(ListView l, View v, int position, long id)
+	@SuppressWarnings("unchecked")
+  protected void onListItemClick(ListView l, View v, int position, long id)
 	{
 		Map<String, Object> rowMap = (Map<String, Object>) l.getItemAtPosition(position);
 		Intent intent = (Intent) rowMap.get(INTENT);

@@ -45,7 +45,8 @@ public class SimpleAdapterActivity extends ListActivity
 		setTitle(title);
 	}
 	
-	@Override
+	@SuppressWarnings("unchecked")
+  @Override
 	protected void onListItemClick(ListView l, View v, int position, long id)
 	{
 		Map<String, Object> rowMap = (Map<String, Object>) l.getItemAtPosition(position);

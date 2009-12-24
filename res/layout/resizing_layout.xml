@@ -4,14 +4,22 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-  <TextView android:id="@+id/resizing_layout_top"
-    android:text="Top"
+    
+  <FrameLayout 
     android:layout_width="fill_parent"
-    android:height="10dpi"
-    />
-  <TextView android:id="@+id/resizing_layout_bottom"
-    android:text="Bottom"
-    android:layout_width="fill_parent"
-    android:height="10dpi"
-    />
+    android:layout_height="fill_parent" >
+    <TextView android:id="@+id/resizing_layout_top"
+	  android:text="Top"
+	  android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="left|bottom"
+	  />
+	<TextView android:id="@+id/resizing_layout_bottom"
+	  android:text="Bottom"
+	  android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="right|top"
+      
+	  />
+  </FrameLayout>
 </LinearLayout>
