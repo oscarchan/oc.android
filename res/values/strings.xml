@@ -2,4 +2,7 @@
 <resources>
     <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">oc.android</string>
+<color name="white">#FFF</color>
+<color name="red">#F00</color>
+<color name="blue">#00F</color>
 </resources>

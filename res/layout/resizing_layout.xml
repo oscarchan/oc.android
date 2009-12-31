@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-    
-  <FrameLayout 
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
-    <TextView android:id="@+id/resizing_layout_top"
-	  android:text="Top"
-	  android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="left|bottom"
-	  />
-	<TextView android:id="@+id/resizing_layout_bottom"
-	  android:text="Bottom"
-	  android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="right|top"
-      
-	  />
-  </FrameLayout>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+    <SlidingDrawer
+      android:id="@+id/rz_slider"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:handle="@+id/rz_handle"
+      android:content="@+id/rz_content">
+      <TextView
+        android:id="@id/rz_handle"
+        android:text="Handle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|bottom"
+        android:background="@color/blue" 
+        android:height="40px"/>
+      <TextView
+        android:id="@id/rz_content"
+        android:text="Content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|top"
+        android:background="@color/red" />
+    </SlidingDrawer>
 </LinearLayout>
