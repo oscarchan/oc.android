@@ -4,27 +4,41 @@
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
-  
-    <SlidingDrawer
-      android:id="@+id/rz_slider"
+  <TextView
+    android:id="@+id/rz_top"
+    android:text="Top"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:background="@color/green" 
+    android:layout_weight="1" />
+  <SlidingDrawer
+    android:id="@+id/rz_slider"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="2"
+    android:handle="@+id/rz_handle"
+    android:content="@+id/rz_content">
+    <TextView
+      android:id="@id/rz_handle"
+      android:text="Handle"
       android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:handle="@+id/rz_handle"
-      android:content="@+id/rz_content">
-      <TextView
-        android:id="@id/rz_handle"
-        android:text="Handle"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left|bottom"
-        android:background="@color/blue" 
-        android:height="40px"/>
-      <TextView
-        android:id="@id/rz_content"
-        android:text="Content"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right|top"
-        android:background="@color/red" />
-    </SlidingDrawer>
+      android:layout_height="wrap_content"
+      android:gravity="left|bottom"
+      android:background="@color/blue"
+      android:height="40px" />
+    <TextView
+      android:id="@id/rz_content"
+      android:text="Content"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="right|top"
+      android:background="@color/red" />
+  </SlidingDrawer>
+  <TextView
+    android:id="@+id/rz_bottom"
+    android:text="Bottom"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent" 
+    android:background="@color/green" 
+    android:layout_weight="1" />
 </LinearLayout>
