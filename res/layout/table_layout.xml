@@ -1,26 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout
- xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <!-- entire row -->
+  <TextView
+    android:id="@+id/tl_row1"
+    android:text="first row"
+    android:drawableLeft="@drawable/bank"
+    android:gravity="right" 
+    />
+    />
+  <!-- empty row: nothing is displayed -->
+  <TableRow
+    android:id="@+id/tl_row2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/green"
     >
-    
-  <FrameLayout 
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
-    <TextView android:id="@+id/resizing_layout_top"
-	  android:text="Top"
-	  android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="left|bottom"
-	  />
-	<TextView android:id="@+id/resizing_layout_bottom"
-	  android:text="Bottom"
-	  android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:gravity="right|top"
-      
-	  />
-  </FrameLayout>
+  </TableRow>
+  <!-- X columns w/ backgroud -->
+  <TableRow
+    android:id="@+id/tl_row3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+    <Button
+      android:text="r3 c1" />
+    <TextView
+      android:text="r3 c2"
+      android:background="@drawable/activity_title_bar"      
+      />
+    <TextView
+      android:text="r3 c3"
+      android:background="@drawable/btn_check_label_background"
+      />
+    <TextView
+      android:text="r3 c4"
+      android:background="@drawable/btn_global_search_normal"
+      />
+    <TextView
+      android:text="r3_c5"
+      android:background="@drawable/textfield_default"
+      />  
+  </TableRow>
+  <!-- two columns with empty cell and padding -->
+  <TableRow
+    android:id="@+id/tl_row4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/lightgray"
+    >
+    <TextView
+      android:text="r4 cell 1"
+      android:padding="1dip" />
+    <TextView />
+    <TextView
+      android:text="r4 c2"
+      android:padding="10dip"
+      android:background="@color/blue" /> 
+  </TableRow>
 </TableLayout>
