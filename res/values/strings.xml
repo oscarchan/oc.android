@@ -6,4 +6,11 @@
 <color name="red">#F00</color>
 <color name="blue">#00F</color>
 <color name="green">#0F0</color>
+<color name="alice_blue">#F0F8FF</color>
+<color name="antique_white">#FAEBD7</color>
+<color name="azure">#F0FFFF</color>
+<color name="beige">#F5F5DC</color>
+<color name="bisque">#FFE4C4</color>
+<color name="blanche ">#FFEBCD</color>
+<color name="cainsboro">#DCDCDC</color>
 </resources>
