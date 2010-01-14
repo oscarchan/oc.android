@@ -56,9 +56,9 @@
     <TextView
       android:text="r4 cell 1"
       android:padding="1dip" />
-    <TextView />
+    <TextView android:background="@color/alice_blue"/>
     <TextView
-      android:text="r4 c2"
+      android:text="r4 c3"
       android:padding="10dip"
       android:background="@color/blue" /> 
   </TableRow>

@@ -75,8 +75,18 @@
         <category
           android:name="android.intent.category.SAMPLE_CODE" />
       </intent-filter>
-    </activity>    
-    TableLayoutTest
+    </activity>
+    <activity
+      android:name=".sandbox.revolve.widget.note.AddNoteActivity"
+      android:theme="@android:style/Theme.Light">
+      <intent-filter>
+        <action
+          android:name="android.intent.action.MAIN" />
+        <category
+          android:name="android.intent.category.SAMPLE_CODE" />
+      </intent-filter>
+    </activity>        
+    
   </application>
   <uses-sdk
     android:minSdkVersion="4" />
